@@ -350,3 +350,146 @@
   
 
 
+#  1. Use a nested loop to convert an array of number pairs into a single flattened array.
+#     For example, [[1, 3], [8, 9], [2, 16]] becomes [1, 3, 8, 9, 2, 16].
+
+# pairs =  [[1, 3], [8, 9], [2, 16]]
+# empty_array = []
+
+# pairs.each do |pair|
+#   pair.each do |number|
+#     empty_array << number
+#   end
+# end
+
+# p empty_array
+
+#  2. Use a nested loop with two arrays of strings to create a new array of strings with each string combined.
+#     For example, ["a", "b", "c"] and ["d", "e", "f", "g"] becomes ["ad", "ae", "af", "ag", "bd", "be", "bf", "bg", "cd", "ce", "cf", "cg"].
+
+# letters_one = ["a", "b", "c"]
+# letters_two = ["d", "e", "f", "g"]
+# letters = []
+
+# letters_one.each do |letter|
+#   letters_two.each do |letter_two|
+#     letters << letter + letter_two
+#   end
+# end
+# p letters
+
+#  3. Use a nested loop with one array of strings to create a new array that contains every combination of each string with every other string in the array.
+#     For example, ["a", "b", "c", "d"] becomes ["ab", "ac", "ad", "ba", "bc", "bd", "ca", "cb", "cd", "da", "db", "dc"].
+
+# letters = ["a", "b", "c", "d"]
+
+# combination = []
+
+# i = 0
+# i_two = 0
+
+# while i < letters.length
+#   while i_two < letters.length
+#     if letters[i] == letters[i_two]
+#       i_two += 1
+#     else
+#       combination<< (letters[i] + letters[i_two])
+#       i_two += 1
+#     end
+#   end
+#   i_two = 0
+#   i += 1
+# end
+# p combination
+
+
+#  4. Use a nested loop to find the largest product of any two different numbers within a given array.
+#     For example, [5, -2, 1, -9, -7, 2, 6] becomes 63.
+
+# numbers = [5, -2, 1, -9, -7, 2, 6]
+# products = []
+
+# i = 0
+# i_two = 0
+
+# while i < numbers.length
+#   while i_two < numbers.length
+#     if numbers[i] == numbers[i_two]
+#       i_two += 1
+#     else
+#       products << (numbers[i] * numbers[i_two])
+#       i_two += 1
+#     end
+#   end
+#   i_two = 0
+#   i += 1
+# end
+
+# p products.max
+
+#  5. Use a nested loop to compute the sum of all the numbers in an array of number pairs.
+#     For example, [[1, 3], [8, 9], [2, 16]] becomes 39.
+# number_pairs = [[1, 3], [8, 9], [2, 16]]
+# numbers = []
+
+# number_pairs.each do |pair|
+#   pair.each do |number|
+#     numbers << number
+#   end
+# end
+# p numbers.sum
+
+#  6. Use a nested loop with two arrays of numbers to create a new array of the sums of each combination of numbers.
+#     For example, [1, 2] and [6, 7, 8] becomes [7, 8, 9, 8, 9, 10].
+
+# numbers_one = [1, 2]
+# numbers_two = [6, 7, 8]
+# combination = []
+
+# numbers_one.each do |number_one|
+#   numbers_two.each do |number_two|
+#     combination << (number_one + number_two)
+#   end
+# end
+
+# p combination
+
+
+#  7. Use a nested loop with an array of numbers to compute an array with every combination of products from each number.
+#     For example, [2, 8, 3] becomes [4, 16, 6, 16, 64, 24, 6, 24, 9].
+
+# numbers = [2, 8, 3]
+# index = 0
+# products = []
+
+# while index < numbers.length
+#   numbers.each do |number|
+#     products << (numbers[index] * number)
+#   end
+#   index += 1
+# end
+
+# p products
+
+#  8. Use a nested loop to find the largest sum of any two different numbers within an array.
+#     For example, [1, 8, 3, 10] becomes 18.
+
+# numbers = [1, 8, 3, 10]
+# sums = []
+# i = 0
+
+# while i < numbers.length
+#   numbers.each do |number|
+#     if numbers[i] == number
+#     else
+#       sums << (numbers[i] + number) 
+#     end
+#   end
+#   i += 1
+# end
+
+# p sums.max
+
+#  9. Use nested loops with an array of numbers to compute a new array containing the first two numbers (from the original array) that add up to the number 10. If there are no two numbers that add up to 10, return false.
+#     For example, [2, 5, 3, 1, 0, 7, 11] becomes [3, 7].
+
